@@ -1,0 +1,41 @@
+<h2>Quadro Kanban</h2>
+<h6>adicione aqui</h6>
+
+<div class="kanban-container">
+  <div class="column">
+    <h3>TO DO</h3>
+      <div *ngFor="let post of listaPosts">
+        <div *ngIf="post.do == 0">
+        <h4>{{ post.title }}</h4>
+        <p>{{ post.describe }}</p>
+        <p>{{ post.category }}</p>
+        <button class="button" (click)="remover(post.id)">Apagar</button>
+        <button class="button" (click)="selecionar(post)">Atualizar</button>
+      </div>
+    </div>
+  </div>
+  </div>
+    <div class="column">
+      <h3>DOING</h3>
+      <div *ngFor="let post of listaPosts">
+        <div *ngIf="post.do == 1">
+          <h4>{{ post.title }}</h4>
+          <p>{{ post.describe }}</p>
+          <p>{{ post.category }}</p>
+          <button class="button" (click)="remover(post.id)">Apagar</button>
+          <button class="button" (click)="selecionar(post)">Atualizar</button>
+          </div>
+        </div>
+    </div>
+  <div class="column">
+    <h3>DONE</h3>
+    <div *ngFor="let post of listaPosts">
+      <div *ngIf="post.do == 2">
+        <h4>{{ post.title }}</h4>
+        <p>{{ post.describe }}</p>
+        <p>{{ post.category }}</p>
+        <button class="button" (click)="remover(post.id)">Apagar</button>
+          <button class="button" (click)="selecionar(post)">Atualizar</button>
+      </div>
+    </div>
+  </div>
